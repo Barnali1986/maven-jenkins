@@ -15,11 +15,15 @@ pipeline { agent any
 			            }
 	   }
 	   
-	   stage('Push') { steps { sh ''' echo Push '''
+	   stage('Push') { steps { sh ''' 
+				         ./push/push.sh
+					'''
 	        }
 	   }
 	   
-	    stage('Deploy') { steps { sh ''' echo Deploy '''
+	    stage('Deploy') { steps { sh ''' 
+				        ./deploy/deploy.sh 
+					'''
 	        }
 	   }
 	}
