@@ -2,7 +2,7 @@ pipeline { agent any
 	
 	stages { stage('Build') { steps {
 				 sh ''' 
-				    ./build/mvn.sh mvn -B -DskipTests clean package
+				    ./build/maven.sh mvn -B -DskipTests clean package
 				    ./build/build.sh
 				    '''
 				 }
