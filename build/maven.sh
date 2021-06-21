@@ -4,4 +4,4 @@ echo "*********************"
 echo "***Building jars*****"
 echo "*********************"
 
-docker container run --rm --mount type=bind,source=/pipeline/java-app,target=/app   --mount type=bind,source=/root/.m2,target=/root/.m2 -w /app maven  "$@"
+docker container run --rm --mount type=bind,source=/var/lib/jenkins/workspace/pipeline-jenkis-maven/java-app,target=/app   --mount type=bind,source=/root/.m2,target=/root/.m2 -w /app maven  "$@"
