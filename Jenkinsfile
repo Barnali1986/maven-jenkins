@@ -1,5 +1,9 @@
 pipeline { agent any
-	
+
+
+	environment {
+		PASS = credentials('PASS')
+	}	
 	stages { stage('Build') { steps {
 				 sh ''' 
 				    ./build/maven.sh mvn -B -DskipTests clean package
