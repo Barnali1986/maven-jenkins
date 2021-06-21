@@ -10,7 +10,7 @@ pipeline { agent any
 	   }
 	   
 	   stage('Test') { steps { sh ''' 
-				       ./test/mvn.sh mvn test
+				       ./test/maven.sh mvn test
 				      '''
 			            }
 	   }
